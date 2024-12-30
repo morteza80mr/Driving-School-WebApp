@@ -68,24 +68,21 @@ The EER diagram illustrates the database structure and the relationships between
 Here are the Figma design prototypes used to create the interface:
 
 #### Landing Page
-![Landing Page](designs/landing_page.png)
+![Landing Page](screenshots/landing_page.jpg)
 
 #### Registration Form Page
-![Registration Form Page](designs/form_page.png)
+![Registration Form Page](screenshots/Registration%20Form%20Page.jpg)
 
 ---
 
 ### Application Screenshots
 The following screenshots demonstrate the application in action:
 
-#### Registering a New User
-![Register User Screenshot](screenshots/register_user.png)
+#### Registering a New User (As a student)
+![Register User Screenshot](screenshots/Register%20User%20Screenshot.jpg)
 
 #### Admin Panel for User Management
-![Admin Panel Screenshot](screenshots/admin_panel.png)
-
-#### Displaying Classes for Students
-![Class Display Screenshot](screenshots/class_display.png)
+![Admin Panel Screenshot](screenshots/Admin%20Panel%20for%20User%20Management.jpg)
 
 ---
 
