@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css framework/milligram.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles_classroom.css' %}">
+</head>
+
+<body>
+    <nav>
+        <ul class="back_none" dir="rtl">
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/classroom/">
+                    لیست حضور و غیاب
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" id="exit" href="http://127.0.0.1:8000/logout/">
+                    خروج
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="cen_container">
+            <div>
+                <table class="tab" border="1" dir="rtl">
+                    <tr>
+                        <th>
+                            شناسه هنرجو
+                        </th>
+                        <th>
+                            وضعیت حضور و غیاب
+                        </th>
+
+                        {% for i in data %}
+                    <tr>
+                        <td>
+                            {{i.student}}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

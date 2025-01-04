@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg,#3297A9,#D4E6F0);
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.cen_container{
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.left_side{
+    margin: auto;
+    height: 80vh;
+    width: 40vw;
+    display: flex;
+    align-self: center;
+}
+.right_side{
+    margin: auto;
+    padding: 20px;
+    height: 80vh;
+    width: 40vw;
+    display: block;
+    text-align: right;
+    font-family: IRANSans Black, Tahoma, sans-serif;
+    color: #26444E;
+    float: right;
+    align-content: center;
+}
+form {
+    flex-direction: column;
+}
+label{
+    display: block;
+}
+select{
+    font-family: IRANSans, Tahoma, sans-serif;
+    background-color:white;
+}
+option{
+    flex-direction: column;
+    text-align: right;
+    padding: 5px;
+    font-family: IRANSans, Tahoma, sans-serif;
+}
+button{
+    font-family: IRANSans, Tahoma, sans-serif; 
+    margin: 8px;
+    background-color: #26444E;
+    border-color: white;
+}

@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: #D8DDE5;
+}
+body{
+    font-family: IRANSans, Tahoma, sans-serif;
+}
+nav{
+    background: linear-gradient(45deg,#3297A9,#D4E6F0);
+    height: 80px;
+    width: 100%;
+}
+.back_none{
+    background: none;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17pt;
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: black;
+}
+a:hover{
+    background: #00A3CF;
+    transition: .5s;
+    color: white;
+    font-family: "IRANSans Black", Tahoma, sans-serif;
+}
+a#exit:hover{
+    background: red;
+    transition: .5s;
+    color: white;
+    font-family: "IRANSans Black", Tahoma, sans-serif;
+}
+@media (max-width: 952px){
+    a:hover{
+        background: none;
+        color: #26444E;
+    }
+}
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.cen_container{
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.middle_side{
+    margin: auto;
+    margin-top: 0;
+    height: 80vh;
+    width: 40vw;
+    display: block;
+    text-align: right;
+    font-family: "IRANSans Black", Tahoma, sans-serif;
+    color: #26444E;
+    float: inline-start;
+    align-content: center;
+    text-align: right;
+}
+form {
+    flex-direction: column;
+    padding: 60px ;
+}
+label{
+    display: block;
+}
+select{
+    font-family: IRANSans, Tahoma, sans-serif;
+    background-color:white;
+}
+option{
+    flex-direction: column;
+    text-align: right;
+    padding: 5px;
+    font-family: IRANSans, Tahoma, sans-serif;
+}
+button{
+    font-family: IRANSans, Tahoma, sans-serif; 
+    margin: 8px;
+    background-color: #26444E;
+    border-color: white;
+}

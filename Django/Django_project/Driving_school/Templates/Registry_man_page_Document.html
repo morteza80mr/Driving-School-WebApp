@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css framework/milligram.css' %}">
+    <link rel="stylesheet" href="{% static 'css/second_styles_Registry_man_page.css' %}">
+</head>
+
+<body>
+    <nav>
+        <ul dir="rtl" class="back_none">
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/registry_man/">
+                    تعریف هنرجو
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/registry_man/Documents/">
+                    تعیین وضعیت مدارک هنرجو
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/registry_man/Delete/">
+                    حذف هنرجو
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" id="exit" href="http://127.0.0.1:8000/logout/">
+                    خروج
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="cen_container">
+            <div class="center_side">
+                <form action="http://127.0.0.1:8000/Driving_school/registry_man/Documents/" method="post">
+                    <label for="Student_ID">: شناسه هنرجو </label>
+                    <br>
+                    <input id="Student_ID" type="number" name="Student_ID">
+                    <br>
+                    <label for="Documents" style="margin-bottom: 5% ;">: وضعیت مدارک</label>
+                    <br>
+                    <select id="recived" name="recived">
+                        <option value="C">دریافت شده</option>
+                        <option value="N">دریافت نشده</option>
+                    </select>
+                    <br>
+                    <div class="row">
+                        <button type="submit" class="column column-50 column-offset-25">ثبت اطلاعات </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

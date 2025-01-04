@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css framework/milligram.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles_student.css' %}">
+</head>
+<body>
+    <nav>
+        <ul class="back_none" dir="rtl">
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/student/">
+                    لیست کلاس ها
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/student/selecting_class/">
+                    انتخاب کلاس
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" id="exit"  href="http://127.0.0.1:8000/logout/">
+                    خروج
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="cen_container">
+            <div>
+                <table class="tab" border="1" dir="rtl">
+                    <tr>
+                        <th>
+                            نوع کلاس
+                        </th>
+                        <th>
+                            شماره کلاس
+                        </th>
+                        <th>
+                            تاریخ کلاس
+                        </th>
+                        <th>
+                            زمان کلاس
+                        </th>
+                        <th>
+                           نام استاد
+                        </th>
+                        <th>
+                            ظرفیت کلاس
+                        </th>
+                    </tr>
+                    {% for i in data %}
+                    <tr>
+                        {% if type_of_class == 'T' %}
+                        <td>
+                            <span>تئوری</span>
+                        </td>
+                        {% else %}
+                        <td>
+                            <span>عملی</span>
+                        </td>
+                        {% endif %}
+                        <td>
+                            {{i.id}}
+                        </td>
+                        <td>
+                            {{i.j_Date_class}}
+                        </td>
+                        <td>
+                            {{i.Time_class}}
+                        </td>
+                        <td>
+                            {{i.name_of_Trainer}}
+                        </td>
+                        <td>
+                            {{i.Capacity}}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

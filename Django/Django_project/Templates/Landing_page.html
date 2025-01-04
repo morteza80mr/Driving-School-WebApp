@@ -1,0 +1,44 @@
+<!DOCTYPE html lang="fa" dir="rtl">
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css framework/milligram.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles_landing_page.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="cen_container">
+                <img class="left_side" src="{% static 'css/car_picture_landing_page.svg' %}" alt="logo of institute">
+                <form action="http://127.0.0.1:8000/" class="right_side" method="post">
+                    {% csrf_token %}
+                    <label for="Workspace_Code">: نوع کاربری</label>
+                    <br>
+                    <select name="Workspace_Code" defa>
+                        <option value="S" selected>هنرجو</option>
+                        <option value="R">مسئول ثبت نام</option>
+                        <option value="F">مسئول مالی</option>
+                        <option value="C"> مسئول تنظیم و برگزاری کلاس  </option>
+                        <option value="T"> مربی </option>
+                        <option value="M">مدیر آموزشگاه</option>
+                    </select>
+                    <br>
+                    <label for="ID">: (کد ملی) شناسه</label>
+                    <br>
+                    <input id="ID" type="number" name="ID">
+                    <br>
+                    <label for="Password">: رمز عبور</label>
+                    <br>
+                    <input id="Password" type="password" name="Password">
+                    <div class="row">
+                    <button class="column column-50 column-offset-25" type="submit" >ورود</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

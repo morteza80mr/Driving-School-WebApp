@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css framework/milligram.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles_Employee.css' %}">
+</head>
+
+<body>
+    <nav>
+        <ul class="back_none" dir="rtl">
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/manager/">
+                    تعریف کارکنان
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/manager/delete/">
+                    حذف کارکنان
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" id="exit" href="http://127.0.0.1:8000/logout/">
+                    خروج
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="cen_container">
+            <div class="middle_side">
+                <form action="http://127.0.0.1:8000/Driving_school/manager/delete/" method="post">
+                    {% csrf_token %}
+                    <label for="National_ID">: کد ملی </label>
+                    <br>
+                    <input id="National_ID" type="text" name="National_ID">
+                    <br>
+                    <div class="row">
+                        <button type="submit" class="column column-50 column-offset-25" style="margin-top: 50px ;">حذف
+                            اطلاعات </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

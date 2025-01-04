@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css framework/milligram.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles_Employee.css' %}">
+</head>
+
+<body>
+    <nav>
+        <ul class="back_none" dir="rtl">
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/manager/">
+                    تعریف کارکنان
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/manager/delete/">
+                    حذف کارکنان
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" id="exit" href="http://127.0.0.1:8000/logout/">
+                    خروج
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="cen_container">
+            <div class="middle_side">
+                <form action="http://127.0.0.1:8000/Driving_school/manager/" method="post">
+                    {% csrf_token %}
+                    <label for="first_name">: نام</label>
+                    <br>
+                    <input id="first_name" type="text" name="first_name">
+                    <br>
+                    <label for="family_name">: نام خانوادگی</label>
+                    <br>
+                    <input id="family_name" type="text" name="family_name">
+                    <br>
+                    <label for="National_ID">: کد ملی </label>
+                    <br>
+                    <input id="National_ID" type="text" name="National_ID">
+                    <br>
+                    <label for="Password">: رمز عبور</label>
+                    <br>
+                    <input id="Password" type="password" name="Password">
+                    <label for="Workspace_Code">: نوع کاربری</label>
+                    <br>
+                    <select id="Workspace_Code" name="Workspace_Code">
+                        <option value="R">مسئول ثبت نام</option>
+                        <option value="F">مسئول مالی</option>
+                        <option value="C">مسئول تنظیم و برگزاری کلاس </option>
+                        <option value="T">مربی </option>
+                    </select>
+                    <div class="row">
+                        <button type="submit" class="column column-50 column-offset-25" style="margin-top: 50px ;">ثبت
+                            اطلاعات </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

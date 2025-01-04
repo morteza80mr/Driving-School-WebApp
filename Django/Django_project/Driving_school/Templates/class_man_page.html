@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css framework/milligram.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles_Employee.css' %}">
+</head>
+
+<body>
+    <nav>
+        <ul class="back_none" dir="rtl">
+            <li class="back_none">
+                <a class="back_none" href="http://127.0.0.1:8000/Driving_school/class_man/">
+                    تعریف کلاس
+                </a>
+            </li>
+            <li class="back_none">
+                <a class="back_none" id="exit" href="http://127.0.0.1:8000/logout/">
+                    خروج
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="cen_container">
+            <div class="middle_side">
+                <form action="http://127.0.0.1:8000/Driving_school/class_man/" method="post">
+                    {% csrf_token %}
+                    <label for="type_of_class">: نوع کلاس</label>
+                    <br>
+                    <select id="type_of_class" name="type_of_class">
+                        <option value="I">عملی</option>
+                        <option value="T">تئوری</option>
+                    </select>
+                    <label for="ID_of_Trainer">: کد ملی مربی</label>
+                    <br>
+                    <input id="ID_of_Trainer" type="text" name="ID_of_Trainer">
+                    <br>
+                    <label for="name_of_Trainer">: نام و نام خانوادگی مربی</label>
+                    <br>
+                    <input id="name_of_Trainer" type="text" name="name_of_Trainer">
+                    <br>
+                    <label for="Date_Exam">: تاریخ کلاس</label>
+                    <br>
+                    <input id="Date_Exam" type="date" name="Date_Exam">
+                    <br>
+                    <label for="Time_Exam">: زمان کلاس </label>
+                    <br>
+                    <select id="Time_Exam" name="Time_Exam">
+                        <option value="14-16"> چهارده الی شانزده بعد از ظهر</option>
+                        <option value="16-18"> شانزده الی هجده بعد از ظهر</option>
+                        <option value="18-20"> هجده الی بیست بعد از ظهر</option>
+                    </select>
+                    <br>
+                    <label for="Capacity">: ظرفیت کلاس </label>
+                    <br>
+                    <input id="Capacity" type="number" name="Capacity">
+                    <div class="row">
+                        <button type="submit" class="column column-50 column-offset-25" style="margin-top: 50px ;">ثبت
+                            اطلاعات </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
